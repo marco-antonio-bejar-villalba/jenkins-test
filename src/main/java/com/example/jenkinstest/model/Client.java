@@ -2,11 +2,7 @@ package com.example.jenkinstest.model;
 
 import com.github.javafaker.Faker;
 import java.util.concurrent.ThreadLocalRandom;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
 
-@NoArgsConstructor
-@Getter
 public class Client {
 
   private static Faker faker = Faker.instance();
@@ -21,6 +17,22 @@ public class Client {
     return new Client(faker.name().name(), faker.name().lastName(), random.nextInt(90),
         faker.commerce().department());
 
+  }
+
+  public int getAge() {
+    return age;
+  }
+
+  public String getDepartment() {
+    return department;
+  }
+
+  public String getLastName() {
+    return lastName;
+  }
+
+  public String getName() {
+    return name;
   }
 
   private Client(String name, String lastName, int age, String department) {
