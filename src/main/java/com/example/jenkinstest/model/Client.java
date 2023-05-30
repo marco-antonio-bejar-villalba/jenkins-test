@@ -14,7 +14,7 @@ public class Client {
 
   public static Client createClient() {
 
-    return new Client(faker.name().name(), faker.name().lastName(), random.nextInt(90),
+    return new Client(faker.dune().character(), faker.name().lastName(), random.nextInt(90),
         faker.commerce().department());
 
   }
